@@ -52,13 +52,12 @@ class GameControl {
         }
         this.checkEat(x,y)
         try {
-            // console.log('start',x,y);
             this.snake.X = x 
             this.snake.Y = y
         } catch (error) {
             console.log(error);
             
-            // alert('GameOver')
+            alert('GameOver')
             this.isAlive = false
         }
         this.isAlive && setTimeout(this.run.bind(this), 200-(this.scorePanel.level-1)*30);
